@@ -27,7 +27,7 @@ elif taxa_ocupacap > 85:
 tarifa_promo = tarifa_promo + (tarifa_base * promocao_pct/100)
 tarifa_final = tarifa_base - tarifa_promo
 receita = float(diarias_vendidas * tarifa_final)
-custo_tot = (custo_fixo_mensal + custo_var_por_diaria) * diarias_vendidas
+custo_tot = custo_fixo_mensal + custo_var_por_diaria * diarias_vendidas
 revpar = receita / diarias_vendidas
 resultado_mes = receita - custo_tot
 if resultado_mes < 0:
@@ -49,4 +49,4 @@ print(f"OCUPACAO_PCT: {taxa_ocupacap:.2f}%")
 print(f"TARIFAS: BASE=R$ {real(tarifa_base)} PROMO=R$ {real(tarifa_promo)} FINAL=R$ {real(tarifa_final)}")
 print(f"AJUSTES_AUTO: LOW_OCC(-10%)={low_occ} HIGH_OCC(+5%)={high_occ}")
 print(f"RECEITA: R$ {real(receita)}\nCUSTO_TOTAL: R$ {real(custo_tot)}\nREVPAR: R$ {real(revpar)}")
-print(f"RESULTADO_TIPO: {resultado}\nLUCRO_PREJUIZO: R$ {resultado_mes}")
+print(f"RESULTADO_TIPO: {resultado}\nLUCRO_PREJUIZO: R$ {real(resultado_mes)}")
