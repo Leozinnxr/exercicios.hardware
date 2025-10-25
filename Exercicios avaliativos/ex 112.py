@@ -1,9 +1,8 @@
-flag = True
 partidas = 0
 vitoria_gremio = 0
 vitoria_inter = 0
 empate = 0
-flag2 = True
+flag = True
 while flag:
     try:
         entrada = input("Digite os gols, respectivamente(Grêmio; Internacional): ").split()
@@ -20,7 +19,8 @@ while flag:
             vitoria_inter += 1
         else:
             empate += 1
-            
+
+        flag2 = True    
         while flag2: 
             continua = int(input("Novo GRENAL 1.Sim 2.Não?"))
 
