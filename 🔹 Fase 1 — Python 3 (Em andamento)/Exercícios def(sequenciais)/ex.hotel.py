@@ -12,6 +12,7 @@ custo_var_por_diaria = float(rel[7])
 high_occ = False
 low_occ = False
 tarifa_promo = 0
+
 #PROCESSO
 diarias_disp = quartos_totais * dias
 taxa_ocupacap = (diarias_vendidas / diarias_disp) * 100
@@ -46,7 +47,7 @@ def real(valor):
 print(f"RESUMO: {hotel.title()}")
 print(f"ESTOQUE: QUARTOS={quartos_totais} DIAS={dias} DIARIAS_DISPONIVEIS=")
 print(f"OCUPACAO_PCT: {taxa_ocupacap:.2f}%")
-print(f"TARIFAS: BASE=R$ {real(tarifa_base)} PROMO=R$ {real(tarifa_promo)} FINAL=R$ {real(tarifa_final)}")
+print(f"TARIFAS: BASE=R$ {real(tarifa_base)} PROMO=R${real(tarifa_promo)} FINAL=R${real(tarifa_final)}")
 print(f"AJUSTES_AUTO: LOW_OCC(-10%)={low_occ} HIGH_OCC(+5%)={high_occ}")
-print(f"RECEITA: R$ {real(receita)}\nCUSTO_TOTAL: R$ {real(custo_tot)}\nREVPAR: R$ {real(revpar)}")
+print(f"RECEITA: R${real(receita)}\nCUSTO_TOTAL: R$ {real(custo_tot)}\nREVPAR: R${real(revpar)}")
 print(f"RESULTADO_TIPO: {resultado}\nLUCRO_PREJUIZO: R$ {real(resultado_mes)}")
